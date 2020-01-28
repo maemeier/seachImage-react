@@ -4,8 +4,13 @@ import "../styles.css";
 
 const ImageList = props => {
   const images = props.images.map(image => {
-    return <ImageCard key={image.id} image={image} text={image.description} />;
+    console.log(props.images);
+    return <ImageCard key={image.id} image={image} text={image.name} />;
   });
-  return <div className="image-list">{images}</div>;
+  return (
+    <>
+      <div className="image-list">{images}</div>
+    </>
+  );
 };
 export default ImageList;
